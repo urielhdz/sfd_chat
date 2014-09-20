@@ -1,0 +1,18 @@
+<div class="medium-top-space text-center">
+	<h1 class="roboto">Chat SFD</h1>
+	<div class="col-md-5 text-left no-padding center-block no-float border-box-shadow" ng-controller="ChatController">
+	  <ul class="no-list  large-padding be-light-facebook no-margin" style="max-height:400px;overflow-y:scroll;">
+	    <li ng-repeat="chat_message in chat_messages" class="top-space animated fadeIn" id="{{chat_message.id}}">
+	    	<div class="col-md-1 no-padding inline-block" style="margin-right:1em;">
+	    		<%= image_tag("batman.jpg") %>
+	    	</div>
+	    	<div class="col-md-6 inline-block chat-message col-md-6 white">
+	    		{{chat_message.message}}	
+	    	</div>
+	    </li>
+	  </ul>
+	  <form ng-submit="addMessage()">
+	  	<input type="text" class="form-control no-margin no-padding" ng-model="new_chat_message.message">
+	  </form>
+	</div>	
+</div>
